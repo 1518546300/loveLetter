@@ -1,0 +1,16 @@
+{
+  "name": "loveletterserver",
+  "version": "1.0.0",
+  "description": "my first table game",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "socket.io": "^2.1.1"
+  }
+}
