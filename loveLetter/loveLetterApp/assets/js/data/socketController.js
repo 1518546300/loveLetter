@@ -29,13 +29,17 @@ const socketController = function(){
     };
 
 
-    that.login = function(unique ,nickname ,avartar ,cb){
+    that.login = function(id ,password ,cb){
         /*_socket.emit('login',{
             uniqueID:unique,
             nickName:nickname,
             avatarUrl:avartar,
         });*/
-        request('login' , {uniqueID:unique , nickName:nickname , avatarUrl:avartar} , cb);
+        request('login' , {id:id , password:password} , cb);
+    };
+
+    that.registerUser = function (id , avatarNum , nickName , email , password ,cb) {
+        request('register' , {id:id , avatarNum:avatarNum , nickName:nickName , email:email , password:password} , cb)
     };
 
     /*that.onLogin = function(data){

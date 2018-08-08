@@ -25,12 +25,12 @@ cc.Class({
     },
 
     onLoad(){
-        global.socket.init();
+
         //global.socket.onLogin();
-        cc.loader.load('http://tieba.baidu.com/photo/p?kw=%E5%A4%B4%E5%83%8F&ie=utf-8&flux=1&tid=5817105172&pic_id=a1459822720e0cf3ef55b73b0646f21fbf09aa63&pn=1&fp=2&see_lz=1',function (err, texture) {
+        /*cc.loader.load('http://tieba.baidu.com/photo/p?kw=%E5%A4%B4%E5%83%8F&ie=utf-8&flux=1&tid=5817105172&pic_id=a1459822720e0cf3ef55b73b0646f21fbf09aa63&pn=1&fp=2&see_lz=1',function (err, texture) {
             var frame=new cc.SpriteFrame(texture);
             self.node.getComponent(cc.Sprite).spriteFrame=frame;
-        });
+        });*/
     },
 
     startButtonClickedFunction: function(event , customerData){
@@ -46,7 +46,7 @@ cc.Class({
                         if(err){
                             console.log('login errr!');
                         }else{
-                            console.log('login data is = ' + JSON.stringify(data));
+                            console.log('login 1111 data is = ' + JSON.stringify(data));
                         }
                     });
                 break;

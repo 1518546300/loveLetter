@@ -48,9 +48,33 @@ const updateSql = function(table , mainKey , mainValue , data){
     return sql;
 };
 
-exports.checkPlayer = function(uniqueID , cb){
+exports.checkPlayerId = function(uniqueID , cb){
     //检查玩家数据
-    let sql = 'select * from t_playerinfo where unique_id = ' + uniqueID + ';';
+    let sql = 'select * from t_userData where userId = ' + uniqueID + ';';
+    query(sql , function(err , data){
+        if(err){
+            console.log('err = ' + err);
+        }
+        console.log('check player = ' + JSON.stringify(data));
+        cb(err , data);
+    });
+};
+
+exports.checkPlayerPassWord = function(id , password , cb){
+    //检查玩家数据
+    let sql = 'select * from t_userData where userId = ' + "'" + id +  "' and " + 'userPassword = ' + "'" + password + "'" + ';';
+    query(sql , function(err , data){
+        if(err){
+            console.log('err = ' + err);
+        }
+        console.log('check player = ' + JSON.stringify(data));
+        cb(err , data);
+    });
+};
+
+exports.checkPlayerNickName = function(nickName , cb){
+    //检查玩家数据
+    let sql = 'select * from t_userData where userNickName = ' + "'" + nickName +  "'" + ';';
     query(sql , function(err , data){
         if(err){
             console.log('err = ' + err);
@@ -62,7 +86,7 @@ exports.checkPlayer = function(uniqueID , cb){
 
 exports.insertPlayerInfo = function(data){
     //插入玩家数据
-    let sql = insertSql('t_playerinfo' , data);
+    let sql = insertSql('t_userData' , data);
     console.log('sql = ' + sql);
     query(sql , function (err , res) {
         if(err){
@@ -76,7 +100,7 @@ exports.insertPlayerInfo = function(data){
 
 exports.updatePlayerInfo = function(mainKey , mainValue , data){
     //更新玩家数据
-    let sql = updateSql('t_playerinfo' , mainKey , mainValue , data);
+    let sql = updateSql('t_userData' , mainKey , mainValue , data);
     query(sql , function(err , data){
         if(err){
             console.log('update player info err = ' + err);

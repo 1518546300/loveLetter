@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "2727865d-2e12-4de4-a150-eb8776a3fb7c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "registerBackdrop": {
+      "ver": "1.0.3",
+      "uuid": "146bd099-49f0-46c5-bfe8-5b810dbd848e",
+      "rawTextureUuid": "2727865d-2e12-4de4-a150-eb8776a3fb7c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1920,
+      "height": 1200,
+      "rawWidth": 1920,
+      "rawHeight": 1200,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
